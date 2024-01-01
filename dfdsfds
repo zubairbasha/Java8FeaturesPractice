@@ -1,0 +1,30 @@
+[33mcommit 74f66d72f5ceb7c396e38f116d8ec1be1835e9c8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Merge: 1907767 8c30c45
+Author: zubair basha <mohammedzubair006@gmail.com>
+Date:   Mon Jan 1 19:37:27 2024 +0530
+
+    Merge branch 'master' of github.com:zubairbasha/Java8FeaturesPractice
+
+[33mcommit 1907767f268596c3a193243c1f2d7597577455be[m
+Author: zubair basha <mohammedzubair006@gmail.com>
+Date:   Mon Jan 1 19:37:02 2024 +0530
+
+    1.Practiced Lambda Expression
+
+[33mcommit 8c30c45e502757973a33e136b576a576fe3d8916[m
+Author: M Zubair Basah <91623908+zubairbasha@users.noreply.github.com>
+Date:   Mon Jan 1 18:40:30 2024 +0530
+
+    Update README.md
+
+[33mcommit 0138f0ff12c2f97f98d56ece201d00655736f381[m
+Author: M Zubair Basah <91623908+zubairbasha@users.noreply.github.com>
+Date:   Mon Jan 1 18:40:22 2024 +0530
+
+    Create README.md
+
+[33mcommit 31acd18855019460a94e107bfe5a15529de41fb5[m
+Author: zubair basha <mohammedzubair006@gmail.com>
+Date:   Mon Jan 1 18:39:52 2024 +0530
+
+    Initial Commit
