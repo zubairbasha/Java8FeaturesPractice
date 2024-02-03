@@ -4,12 +4,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 
 public class StreamAPI {
     public static void main(String[] args) {
         //all match
-        List<String> words= Arrays.asList("apple","banana","cherry");
+        List<String> words= Arrays.asList("apple","banana","cherry","apple");
        /* boolean check=words.stream().allMatch(StreamAPI::checkTheWord);
         System.out.println(check);*/
         //anymatch
@@ -29,8 +31,43 @@ public class StreamAPI {
         //Joining a string
         String joinedString=words.stream().collect(Collectors.joining(","));
         System.out.println(joinedString);
+        //count
+        long count=words.stream().count();
+        System.out.println(count);
+        List<String> distinctWords=words.stream()
+                .distinct().collect(Collectors.toList());
+        System.out.println(distinctWords);
+        System.out.println(words.stream().noneMatch(StreamAPI::checkTheWord));
+       System.out.println( words.stream()
+                       .filter(StreamAPI::checkTheWord)
+               .findAny());
+       List<List<Integer>> flatMap=Arrays.asList(
+               Arrays.asList(1, 2, 3),
+               Arrays.asList(4, 5, 6),
+               Arrays.asList(7, 8, 9)
+
+       );
+       List<Integer> ans= flatMap.stream().flatMap(List::stream)
+               .collect(Collectors.toList());
+       System.out.println(ans);
+        List<String> words2= Arrays.asList("hello", "world", "java");
+        List<Character> flatternChar=words2.stream()
+                .flatMap(word->word.chars().mapToObj(c->(char)c))
+                .collect(Collectors.toList());
+        System.out.println(flatternChar);
+        String value="abababcc";
+        System.out.println(value.chars()
+                .mapToObj(c->(char) c)
+                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting())));
+        //DoubleStream
+        List<Integer> num2=Arrays.asList(1,2,3,4,5);
+        DoubleStream resultDobleStream=num2.stream()
+                .flatMapToDouble(val->DoubleStream.of(val));
+        resultDobleStream.forEachOrdered(x->System.out.print(x+","));
+
+
     }
     public static boolean checkTheWord(String word){
-       return word.startsWith("a");
+       return word.startsWith("b");
     }
 }
